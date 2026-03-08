@@ -1,0 +1,38 @@
+{
+	"description": "Personal Knowledge Manager - 个人知识管理工具",
+	"plugins": [
+		"tiddlywiki/markdown",
+		"tiddlywiki/highlight",
+		"tiddlywiki/browser-storage",
+		"tiddlywiki/freelinks",
+		"tiddlywiki/menubar",
+		"tiddlywiki/codemirror",
+		"tiddlywiki/codemirror-autocomplete",
+		"tiddlywiki/codemirror-closebrackets",
+		"tiddlywiki/codemirror-closetag",
+		"tiddlywiki/codemirror-mode-css",
+		"tiddlywiki/codemirror-mode-htmlmixed",
+		"tiddlywiki/codemirror-mode-javascript",
+		"tiddlywiki/codemirror-mode-markdown",
+		"tiddlywiki/codemirror-mode-xml",
+		"tiddlywiki/codemirror-mode-x-tiddlywiki",
+		"tiddlywiki/codemirror-search-replace",
+		"tiddlywiki/katex",
+		"tiddlywiki/jszip"
+	],
+	"languages": [
+		"zh-Hans",
+		"zh-Hant",
+		"en-US"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite",
+		"tiddlywiki/starlight"
+	],
+	"build": {
+		"index": [
+			"--rendertiddler","$:/core/save/all","index.html","text/plain"
+		]
+	}
+}

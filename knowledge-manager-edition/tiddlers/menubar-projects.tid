@@ -1,0 +1,7 @@
+title: $:/km/menubar/projects
+caption: Projects
+description: Go to Projects
+tags: $:/tags/MenuBar
+type: text/vnd.tiddlywiki
+
+<$button message="tm-navigate" to="Projects" class="tc-btn-invisible">Projects</$button>

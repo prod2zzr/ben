@@ -1,0 +1,102 @@
+title: $:/km/styles
+tags: $:/tags/Stylesheet
+type: text/vnd.tiddlywiki
+
+.km-dashboard {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.km-stats-bar {
+  display: flex;
+  gap: 24px;
+  padding: 16px 20px;
+  background: #f0f4f8;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.km-stat {
+  font-size: 0.95em;
+  color: #4a5568;
+}
+
+.km-section {
+  margin-bottom: 28px;
+}
+
+.km-two-col {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.km-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.km-recent-item {
+  padding: 4px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.km-date {
+  color: #a0aec0;
+  font-size: 0.85em;
+}
+
+.km-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.km-tag-btn {
+  cursor: pointer;
+  font-size: 0.85em;
+}
+
+.km-create-btn {
+  margin-right: 8px;
+}
+
+.km-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.km-search-input:focus {
+  border-color: #4299e1;
+}
+
+.km-search-results {
+  margin-top: 12px;
+  padding: 8px 0;
+}
+
+.km-search-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.km-tags {
+  margin-left: 8px;
+}
+
+@media (max-width: 640px) {
+  .km-two-col {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .km-stats-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
