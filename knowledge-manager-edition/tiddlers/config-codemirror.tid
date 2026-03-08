@@ -1,0 +1,12 @@
+title: $:/config/codemirror
+type: application/json
+
+{
+    "lineNumbers": true,
+    "lineWrapping": true,
+    "matchBrackets": true,
+    "autoCloseBrackets": true,
+    "indentUnit": 4,
+    "tabSize": 4,
+    "indentWithTabs": true
+}

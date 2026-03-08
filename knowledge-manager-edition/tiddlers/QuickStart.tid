@@ -1,0 +1,46 @@
+title: QuickStart
+caption: Quick Start Guide
+tags: Help
+type: text/vnd.tiddlywiki
+
+! Quick Start Guide / 快速入门
+
+Welcome to your Personal Knowledge Manager! This tool is built on [[TiddlyWiki|https://tiddlywiki.com]], customized for knowledge management.
+
+!! Core Concepts
+
+* ''Tiddler'' - The basic unit of content, like a note card. Each tiddler has a title, content, and optional tags.
+* ''Tags'' - Organize tiddlers with tags. Click any tag to see related content.
+* ''Links'' - Create links between tiddlers using `[[Title]]` syntax. The ''Freelinks'' plugin also auto-links tiddler titles.
+* ''WikiText'' - TiddlyWiki's markup language. See [[WikiText Reference|https://tiddlywiki.com/#WikiText]] for details.
+
+!! Key Features
+
+|!Feature|!Description|
+|Dashboard|Overview of your knowledge base with stats, recent items, and search|
+|Journal|Daily journaling with date-stamped entries|
+|Projects|Track projects with tasks and notes|
+|Reading Notes|Book notes with status tracking (Reading/Done/ToRead)|
+|Markdown|Write in Markdown (set tiddler type to `text/x-markdown`)|
+|Math|LaTeX math with KaTeX: `$$E=mc^2$$`|
+|Code Highlighting|Syntax highlighting for code blocks|
+|Browser Storage|Auto-saves changes to browser local storage|
+|Full Text Search|Built-in search across all content|
+|Freelinks|Automatically links tiddler titles in text|
+
+!! How to Save
+
+This is a single HTML file. To save your changes:
+
+# ''Browser Storage'' (automatic) - Changes are auto-saved to your browser's local storage
+# ''Download'' - Click the save button (checkmark icon) in the sidebar to download the updated HTML file
+# ''Replace'' the old file with the downloaded one to keep your data
+
+!! Tips
+
+* Use `Ctrl+Enter` to save a tiddler being edited
+* Use `Escape` to cancel editing
+* Click the `+` button or use the sidebar to create new tiddlers
+* Use `[img[url]]` to embed images
+* Use `<<tag "TagName">>` to create clickable tag pills
+* Drag and drop files onto the wiki to import them

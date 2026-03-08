@@ -1,0 +1,22 @@
+title: Journal
+tags:
+type: text/vnd.tiddlywiki
+
+! Journal Entries
+
+<$button class="tc-btn-big-green">
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY-MM-DD journal">> tags="Journal" text={{{ [<now "YYYY年MM月DD日 dddd">addprefix[!! "]addsuffix["
+
+---
+
+]] }}}/>
+New Journal Entry
+</$button>
+
+---
+
+<$list filter="[tag[Journal]!has[draft.of]!sort[created]]" emptyMessage="No journal entries yet. Click the button above to create your first entry!">
+<div class="km-recent-item">
+<$link/> <span class="km-date">&mdash; <$view field="created" format="date" template="YYYY-MM-DD"/></span>
+</div>
+</$list>

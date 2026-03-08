@@ -1,0 +1,38 @@
+title: Projects
+tags:
+type: text/vnd.tiddlywiki
+
+! Project List
+
+<$button class="tc-btn-big-green">
+<$action-sendmessage $message="tm-new-tiddler" tags="Project" text="!! Description
+
+!! Tasks
+
+* [ ] Task 1
+* [ ] Task 2
+
+!! Notes
+
+!! References
+"/>
+New Project
+</$button>
+
+---
+
+!! Active Projects
+
+<$list filter="[tag[Project]!has[draft.of]!tag[Completed]sort[title]]" emptyMessage="No active projects.">
+<div class="km-recent-item">
+<$link/> <span class="km-date">&mdash; Modified: <$view field="modified" format="relativedate"/></span>
+</div>
+</$list>
+
+!! Completed Projects
+
+<$list filter="[tag[Project]tag[Completed]sort[title]]" emptyMessage="No completed projects yet.">
+<div class="km-recent-item">
+<$link/>
+</div>
+</$list>

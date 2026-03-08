@@ -1,0 +1,7 @@
+title: $:/km/menubar/journal
+caption: Journal
+description: Go to Journal
+tags: $:/tags/MenuBar
+type: text/vnd.tiddlywiki
+
+<$button message="tm-navigate" to="Journal" class="tc-btn-invisible">Journal</$button>

@@ -1,0 +1,92 @@
+title: Dashboard
+tags:
+type: text/vnd.tiddlywiki
+
+\define tag-cloud()
+<div class="km-tag-cloud">
+<$list filter="[tags[]sort[title]]" variable="tag">
+<$button class="tc-tag-label km-tag-btn" set="$:/temp/search" setTo=<<tag>>>
+<<tag>> (<$count filter="[tag<tag>]"/>)
+</$button>
+</$list>
+</div>
+\end
+
+\define recent-list()
+<$list filter="[!is[system]!has[draft.of]!sort[modified]limit[15]]">
+<div class="km-recent-item">
+<$link/> <span class="km-date">&mdash; <$view field="modified" format="relativedate"/></span>
+</div>
+</$list>
+\end
+
+! {{$:/SiteTitle}}
+
+<div class="km-dashboard">
+
+<div class="km-stats-bar">
+<span class="km-stat">{{$:/language/SideBar/All/Caption}}: ''<$count filter="[!is[system]!has[draft.of]]"/>''</span>
+<span class="km-stat">{{$:/language/SideBar/Tags/Caption}}: ''<$count filter="[tags[]sort[title]]"/>''</span>
+<span class="km-stat">Orphans: ''<$count filter="[!is[system]!has[draft.of]orphans[]]"/>''</span>
+</div>
+
+<div class="km-section">
+
+!! Quick Create
+
+<$button message="tm-new-tiddler" class="tc-btn-big-green km-create-btn">New Note</$button>
+<$button message="tm-new-tiddler" param="Journal" class="tc-btn-big-green km-create-btn">New Journal</$button>
+
+</div>
+
+<div class="km-two-col">
+
+<div class="km-col">
+
+!! Recently Modified
+
+<<recent-list>>
+
+</div>
+
+<div class="km-col">
+
+!! Tags
+
+<<tag-cloud>>
+
+</div>
+
+</div>
+
+<div class="km-section">
+
+!! Search
+
+<$edit-text tiddler="$:/temp/search" tag="input" type="search" placeholder="Search knowledge base..." class="km-search-input"/>
+
+<$reveal state="$:/temp/search" type="nomatch" text="">
+<div class="km-search-results">
+<$list filter="[!is[system]search{$:/temp/search}sort[title]limit[20]]" emptyMessage="No results found.">
+<div class="km-search-item">
+<$link/> <span class="km-tags"><$list filter="[all[current]tags[]]" variable="tag"><$button class="tc-tag-label" set="$:/temp/search" setTo=<<tag>>><<tag>></$button> </$list></span>
+</div>
+</$list>
+</div>
+</$reveal>
+
+</div>
+
+<div class="km-section">
+
+!! Orphan Notes (no tags, no links)
+
+<$list filter="[!is[system]!has[draft.of]orphans[]limit[10]]" emptyMessage="No orphan notes - great job organizing!">
+<div class="km-search-item">
+<$link/>
+</div>
+</$list>
+
+</div>
+
+</div>

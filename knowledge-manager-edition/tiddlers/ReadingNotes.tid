@@ -1,0 +1,50 @@
+title: ReadingNotes
+caption: Reading Notes
+tags:
+type: text/vnd.tiddlywiki
+
+! Reading Notes
+
+<$button class="tc-btn-big-green">
+<$action-sendmessage $message="tm-new-tiddler" tags="Reading" text="!! Book Info
+
+|!Title|  |
+|!Author|  |
+|!Category|  |
+|!Status| Reading |
+
+!! Key Takeaways
+
+#
+
+!! Notes
+
+!! Quotes
+
+>
+
+!! Rating
+
+"/>
+New Reading Note
+</$button>
+
+---
+
+!! Currently Reading
+
+<$list filter="[tag[Reading]!has[draft.of]field:status[Reading]sort[title]]" emptyMessage="Not reading anything currently.">
+<div class="km-recent-item"><$link/></div>
+</$list>
+
+!! Completed
+
+<$list filter="[tag[Reading]!has[draft.of]field:status[Done]sort[title]]" emptyMessage="No completed reads yet.">
+<div class="km-recent-item"><$link/></div>
+</$list>
+
+!! To Read
+
+<$list filter="[tag[Reading]!has[draft.of]field:status[ToRead]sort[title]]" emptyMessage="Reading list is empty.">
+<div class="km-recent-item"><$link/></div>
+</$list>
